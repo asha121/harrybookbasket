@@ -27,9 +27,10 @@ public class BookBasket {
 			price = 15.2d;
 		else if (booksInBasket.size() == 3)
 			price = 21.6d;
-		else
+		else if (booksInBasket.size() == 4)
 			price = 25.6d;
-
+		else
+			price = 30d;
 		return price;
 	}
 
