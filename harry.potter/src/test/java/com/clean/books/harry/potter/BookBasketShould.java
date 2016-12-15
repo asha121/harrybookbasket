@@ -21,12 +21,13 @@ public class BookBasketShould {
 	}
 
 	@Test
-	public void eturn_price_for_different_3diff_books() {
+	public void return_price_for_different_3_books() {
 		BookBasket basket = new BookBasket();
 		basket.add(Book.HARRY_POTTER_BOOK_1);
 		basket.add(Book.HARRY_POTTER_BOOK_2);
 		basket.add(Book.HARRY_POTTER_BOOK_3);
 		assertEquals(21.6d, basket.getBasketPrice(), 0);
 	}
+	
 
 }
