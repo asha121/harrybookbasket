@@ -11,5 +11,12 @@ public class BookBasketShould {
 		basket.add("HARRY_POTTER_BOOK_1");
 		assertEquals(8d, basket.getBasketPrice(), 0);
 	}
+	@Test
+	public void return_price_for_different_book() {
+		BookBasket basket = new BookBasket();
+		basket.add("HARRY_POTTER_BOOK_1");
+		basket.add("HARRY_POTTER_BOOK_2");
+		assertEquals(15.2D, basket.getBasketPrice(),0);
+	}
 
 }
