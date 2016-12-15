@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BookBasket {
-	private Map<String, Integer> booksInBasket;
+	private Map<Book, Integer> booksInBasket;
 
-	public void add(String book) {
+	public void add(Book book) {
 		Integer count = this.booksInBasket.get(book);
 		if (count == null) {
 			count = 0;
@@ -15,14 +15,14 @@ public class BookBasket {
 	}
 
 	public BookBasket() {
-		this.booksInBasket = new HashMap<String, Integer>();
+		this.booksInBasket = new HashMap<Book, Integer>();
 	}
 
 	public double getBasketPrice() {
-	if (booksInBasket.size()==1)
-		return 8d;
-	else  
-		return 15.2d;
+		if (booksInBasket.size() == 1)
+			return 8d;
+		else
+			return 15.2d;
 	}
 
 }
