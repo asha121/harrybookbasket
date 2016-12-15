@@ -6,7 +6,7 @@ public class BookBasket {
 	}
 
 	public double getBasketPrice() {
-		return 0;
+		return 8;
 	}
 
 }
