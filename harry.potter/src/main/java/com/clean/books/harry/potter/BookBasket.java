@@ -21,8 +21,10 @@ public class BookBasket {
 	public double getBasketPrice() {
 		if (booksInBasket.size() == 1)
 			return 8d;
-		else
+		else if (booksInBasket.size() == 2)
 			return 15.2d;
+		else 
+			return 21.6d;
 	}
 
 }
