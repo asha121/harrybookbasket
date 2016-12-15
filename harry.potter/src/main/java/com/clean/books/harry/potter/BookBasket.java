@@ -19,14 +19,18 @@ public class BookBasket {
 	}
 
 	public double getBasketPrice() {
+		double price = 0;
+
 		if (booksInBasket.size() == 1)
-			return 8d;
+			price = 8d;
 		else if (booksInBasket.size() == 2)
-			return 15.2d;
+			price = 15.2d;
 		else if (booksInBasket.size() == 3)
-			return 21.6d;
+			price = 21.6d;
 		else
-			return 25.6d;
+			price = 25.6d;
+
+		return price;
 	}
 
 }
