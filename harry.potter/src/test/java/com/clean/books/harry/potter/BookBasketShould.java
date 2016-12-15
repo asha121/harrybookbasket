@@ -16,7 +16,7 @@ public class BookBasketShould {
 		BookBasket basket = new BookBasket();
 		basket.add("HARRY_POTTER_BOOK_1");
 		basket.add("HARRY_POTTER_BOOK_2");
-		assertEquals(15.2D, basket.getBasketPrice(),0);
+		assertEquals(15.2d, basket.getBasketPrice(),0);
 	}
 
 }
