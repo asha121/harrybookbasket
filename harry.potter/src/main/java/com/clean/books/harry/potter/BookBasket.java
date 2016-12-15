@@ -23,8 +23,10 @@ public class BookBasket {
 			return 8d;
 		else if (booksInBasket.size() == 2)
 			return 15.2d;
-		else 
+		else if (booksInBasket.size() == 3)
 			return 21.6d;
+		else
+			return 25.6d;
 	}
 
 }
