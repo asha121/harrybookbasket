@@ -25,29 +25,38 @@ public class BookBasket {
 		while (booksInBasket.size() > 0) {
 			int diffBooksCount = 0;
 			Iterator<Entry<Book, Integer>> iterator = booksInBasket.entrySet().iterator();
-			while (iterator.hasNext()) {
-				Entry<Book, Integer> book = iterator.next();
-				if (diffBooksCount == 3 && booksInBasket.size() == 3) {
-					break;
-				}
-				if (book.getValue() == 1) {
-					iterator.remove();
-				} else {
-					book.setValue(book.getValue() - 1);
-				}
-				diffBooksCount++;
+			price = getPrice(price, getDifferentBookCount(diffBooksCount, iterator));
+		}
+		return price;
+	}
+
+	private int getDifferentBookCount(int diffBooksCount, Iterator<Entry<Book, Integer>> iterator) {
+		while (iterator.hasNext()) {
+			Entry<Book, Integer> book = iterator.next();
+			if (diffBooksCount == 3 && booksInBasket.size() == 3) {
+				break;
 			}
-			if (diffBooksCount == 1) {
-				price += 8d;
-			} else if (diffBooksCount == 2) {
-				price += 15.2d;
-			} else if (diffBooksCount == 3) {
-				price += 21.6d;
-			} else if (diffBooksCount == 4) {
-				price += 25.6d;
+			if (book.getValue() == 1) {
+				iterator.remove();
 			} else {
-				price += 30d;
+				book.setValue(book.getValue() - 1);
 			}
+			diffBooksCount++;
+		}
+		return diffBooksCount;
+	}
+
+	private double getPrice(double price, int diffBooksCount) {
+		if (diffBooksCount == 1) {
+			price += 8d;
+		} else if (diffBooksCount == 2) {
+			price += 15.2d;
+		} else if (diffBooksCount == 3) {
+			price += 21.6d;
+		} else if (diffBooksCount == 4) {
+			price += 25.6d;
+		} else {
+			price += 30d;
 		}
 		return price;
 	}

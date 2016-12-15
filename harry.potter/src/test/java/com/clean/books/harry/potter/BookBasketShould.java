@@ -59,4 +59,18 @@ public class BookBasketShould {
 		basket.add(Book.HARRY_POTTER_BOOK_1);
 		assertEquals(29.6d, basket.getBasketPrice(), 0);
 	}
+	
+	@Test
+	public void return_price_for_fiver_differen_and_pair_books() {
+		BookBasket basket = new BookBasket();
+		basket.add(Book.HARRY_POTTER_BOOK_1);
+		basket.add(Book.HARRY_POTTER_BOOK_1);
+		basket.add(Book.HARRY_POTTER_BOOK_2);
+		basket.add(Book.HARRY_POTTER_BOOK_2);
+		basket.add(Book.HARRY_POTTER_BOOK_3);
+		basket.add(Book.HARRY_POTTER_BOOK_3);
+		basket.add(Book.HARRY_POTTER_BOOK_4);
+		basket.add(Book.HARRY_POTTER_BOOK_5);
+		assertEquals(51.6d, basket.getBasketPrice(), 0);
+	}
 }
